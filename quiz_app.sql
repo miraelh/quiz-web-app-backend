@@ -4,3 +4,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     role ENUM('admin', 'user') DEFAULT 'user'
 );
+
+
+CREATE TABLE quizzes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    created_by INT,
+    FOREIGN KEY (created_by) REFERENCES users(id)
+);
