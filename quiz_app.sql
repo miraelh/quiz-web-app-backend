@@ -13,10 +13,19 @@ CREATE TABLE quizzes (
     FOREIGN KEY (created_by) REFERENCES users(id)
 );
 
+
 CREATE TABLE questions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     quiz_id INT,
     question_text TEXT NOT NULL,
     correct_answer VARCHAR(255) NOT NULL,
     FOREIGN KEY (quiz_id) REFERENCES quizzes(id)
+);
+
+
+CREATE TABLE options (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question_id INT,
+    option_text VARCHAR(255),
+    FOREIGN KEY (question_id) REFERENCES questions(id)
 );
