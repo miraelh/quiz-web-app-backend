@@ -3,6 +3,7 @@
 $host = 'localhost'; 
 $username = 'root'; 
 $password = ''; 
+$dbname = 'quizmii';
 
 
 ?>
