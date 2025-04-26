@@ -10,6 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $created_by = intval($_POST['created_by']);
 
 
+
+    $sql = "INSERT INTO quizzes (title, created_by) VALUES ('$title', $created_by)";
+    
 }
 
 ?>
