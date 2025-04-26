@@ -21,6 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            echo "Error creating quiz: " . mysqli_error($conn);
     }
 
+    mysqli_close($conn);
+
 }
 
 ?>
