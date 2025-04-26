@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "UPDATE questions SET question_text = '$new_question_text', correct_answer = '$new_correct_answer' WHERE id = $question_id";
 
+    mysqli_close($conn);
 }
 
 ?>
