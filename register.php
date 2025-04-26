@@ -14,4 +14,12 @@ if ($password !== $confirm_password) {
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
+$check_user_sql = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
+$result = mysqli_query($conn, $check_user_sql);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "Username or Email already taken!";
+    exit;
+}
+
 ?>
