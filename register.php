@@ -1,5 +1,7 @@
 <?php 
 
+include 'connect.php';  
+
 $username = mysqli_real_escape_string($conn, $_POST['username']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
