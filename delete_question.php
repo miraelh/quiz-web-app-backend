@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "DELETE FROM questions WHERE id = $question_id";
 
+    mysqli_close($conn);
+
 }
 
 ?>
