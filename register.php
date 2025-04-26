@@ -11,4 +11,7 @@ if ($password !== $confirm_password) {
     exit;
 }
 
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+
 ?>
