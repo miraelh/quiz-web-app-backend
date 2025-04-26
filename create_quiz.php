@@ -13,6 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "INSERT INTO quizzes (title, created_by) VALUES ('$title', $created_by)";
     
+
+
+    if (mysqli_query($conn, $sql)) {
+            echo "Quiz created successfully!";
+        } else {
+           echo "Error creating quiz: " . mysqli_error($conn);
+    }
+
 }
 
 ?>
