@@ -25,6 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Username or Email already taken!";
         exit;
     }
+
+    $insert_sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+    if (mysqli_query($conn, $insert_sql)) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+
 }
 
 ?>
